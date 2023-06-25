@@ -1,7 +1,8 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "@firebase/firestore";
-import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import { getStorage, ref, uploadBytes, getDownloadURL} from "firebase/storage";
 import {v4} from 'uuid'
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyAZveAQR4M0_UjDWsAG--oeHZirFp6KK48",
@@ -22,16 +23,6 @@ export const subirImagen = async (file) => {
   const urlImg = await getDownloadURL(uploadImg)
   return urlImg
 }
-export const actualizarImagen = async (existingFile, newFile) => {
-
-    const existingRef = ref(storage, existingFile);
-    const newRef = ref(storage, uuidv4()); 
-    await put(newRef, newFile);
-    await deleteObject(existingRef);
-    const urlImg = await getDownloadURL(newRef);
-  
-    return urlImg;
-  };
 
   
   

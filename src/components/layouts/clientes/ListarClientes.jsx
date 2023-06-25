@@ -2,6 +2,7 @@ import {collection, getDocs, doc, deleteDoc} from "firebase/firestore"
 import { useState, useEffect } from "react"
 import { dataBase } from "../../config/dataBase"
 import React from 'react'
+import Menu from "./../Menu"
 import { Link } from "react-router-dom"
 
 const ListarClientes = () => {
@@ -20,9 +21,10 @@ const ListarClientes = () => {
   useEffect(()=>{
     mostrarClientes();
   },[]);
-  console.log(clientes)
+  // console.log(clientes)
   return (
     <section>
+      <Menu/>
       <h1>Esta es la lista de clientes</h1>
       <hr />
       <h1>Para crear un nuevo cliente pulse aqui</h1>
@@ -38,7 +40,6 @@ const ListarClientes = () => {
             <h4>Barrio: {cliente.barrio}</h4>
             <h4>Ciudad: {cliente.ciudad}</h4>
             <img src={cliente.urlImg} alt="imagen"/>
-            <p>{cliente.urlImg}</p>
             <button onClick={(()=>{eliminarCliente(cliente.id)})}>Eliminar</button>
             <Link to={'/editarCliente/'+cliente.id} >Editar</Link>
           </section>
