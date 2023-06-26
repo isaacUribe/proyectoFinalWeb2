@@ -23,18 +23,20 @@ header{
     color: white;
   }
   .ul li .link:hover{
-    background-color: red;
+    background-color: rgb(58, 53, 53);
+    border-radius: 15px;
   }
 .imgemple{
     width: 400px;
     height: 200px;
     border-radius: 15px;
 }
-
-.section{
-    border: 1px solid black;
-    width: 500px;
-    text-align: center;
-    padding: 10px;
-    margin: 3px;
+.img-div{
+   width: 200px;
+   height: 200px;
+}
+.img{
+  width: 100%;
+  height: 100%;
+  border-radius: 15%;
 }

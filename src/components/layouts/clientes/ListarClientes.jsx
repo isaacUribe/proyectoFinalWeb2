@@ -31,7 +31,7 @@ const ListarClientes = () => {
       <Link to={'/crearcliente'}>Crear</Link>
       {
         clientes.map((cliente)=>(
-          <section className="section" key={cliente.id}>
+          <section key={cliente.id}>
             <h1>Nombre: {cliente.nombre}</h1>
             <h2>Documento: {cliente.documento}</h2>
             <h2>Correo: {cliente.correo}</h2>
@@ -39,7 +39,9 @@ const ListarClientes = () => {
             <h4>Direccion: {cliente.direccion}</h4>
             <h4>Barrio: {cliente.barrio}</h4>
             <h4>Ciudad: {cliente.ciudad}</h4>
-            <img src={cliente.urlImg} alt="imagen"/>
+            <div className="img-div">
+              <img src={cliente.urlImg} alt="imagen" className="img"/>
+            </div>
             <button onClick={(()=>{eliminarCliente(cliente.id)})}>Eliminar</button>
             <Link to={'/editarCliente/'+cliente.id} >Editar</Link>
           </section>
