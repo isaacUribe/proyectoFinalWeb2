@@ -10,6 +10,8 @@ import CrearProductos from "./components/layouts/productos/CrearProductos"
 import ListarProveedores from "./components/layouts/proveedores/ListarProveedores"
 import Peliculas from "./components/layouts/Peliculas"
 import EditarProducto from "./components/layouts/productos/EditarProducto"
+import CrearProveedor from "./components/layouts/proveedores/CrearProveedor"
+import EditarProveedor from "./components/layouts/proveedores/EditarProveedor"
 const router = createBrowserRouter([
   {
     path:'/',
@@ -50,6 +52,14 @@ const router = createBrowserRouter([
   {
     path:'/listarproveedores',
     element:<ListarProveedores/>
+  },
+  {
+    path:'/crearproveedor',
+    element:<CrearProveedor/>
+  },
+  {
+    path:'/editarproveedor/:id',
+    element:<EditarProveedor/>
   },
   {
     path:'/peliculas',
