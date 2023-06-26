@@ -31,7 +31,7 @@ const ListarClientes = () => {
       <Link to={'/crearcliente'}>Crear</Link>
       {
         clientes.map((cliente)=>(
-          <section key={cliente.id}>
+          <section className="section" key={cliente.id}>
             <h1>Nombre: {cliente.nombre}</h1>
             <h2>Documento: {cliente.documento}</h2>
             <h2>Correo: {cliente.correo}</h2>
