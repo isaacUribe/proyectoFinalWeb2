@@ -38,6 +38,7 @@ const EditarCliente = () => {
     useEffect(()=>{
         clienteActualizado(id)
     },[])
+    
   return (
     <section>
         <form>
@@ -49,7 +50,7 @@ const EditarCliente = () => {
             <input onChange={(e)=>setBarrio(e.target.value)}placeholder={'Barrio cliente'} type={"text"} value={barrio}/>
             <input onChange={(e)=>setCiudad(e.target.value)}placeholder={'Ciudad cliente'} type={"text"} value={ciudad}/>
             <img src={img}/>
-            <input onChange={(e)=>setImg(e.target.files[0])} type="file"/>
+            <input onChange={(e)=>setImg(e.target.files[0])} type="file" accept="image/*"/>
             <input onClick={editarCliente} type="button" value={"Editar Cliente"}/>
         </form>
     </section>

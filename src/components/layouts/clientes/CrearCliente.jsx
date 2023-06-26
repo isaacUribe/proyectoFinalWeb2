@@ -34,7 +34,7 @@ const CrearCliente = () => {
             <input onChange={(e)=>setDireccion(e.target.value)}placeholder={'Direccion cliente'} type={"text"}/>
             <input onChange={(e)=>setBarrio(e.target.value)}placeholder={'Barrio cliente'} type={"text"}/>
             <input onChange={(e)=>setCiudad(e.target.value)}placeholder={'Ciudad cliente'} type={"text"}/>
-            <input onChange={(e)=>setImg(e.target.files[0])} type="file" />
+            <input onChange={(e)=>setImg(e.target.files[0])} type="file"/>
             <input onClick={agregarCliente} type="button" value={"Agregar Cliente"}/>
         </form>
     </section>
