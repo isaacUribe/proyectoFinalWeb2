@@ -2,8 +2,14 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize; 
 }
-header{
+
+
+ header{
     width: 100%;
     background-color: rgb(39, 119, 238);
   }
@@ -29,7 +35,7 @@ header{
     width: 400px;
     height: 200px;
     border-radius: 15px;
-}
+} */
 
 .section{
     border: 1px solid black;
@@ -37,4 +43,47 @@ header{
     text-align: center;
     padding: 10px;
     margin: 3px;
+} 
+.form{
+  background-color: rgb(167, 167, 196);
+  margin:auto;
+  width: 90%;
+  max-width: 400px;
+  padding: 6rem 3rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px -5px rgb(0, 0, 0 /30%);
+  text-align: center;
+}
+.form-container{
+  margin-top: 3rem;
+  display: grid;
+  gap: 2.5em;
+}
+.form-grupo{
+  position: relative;
+}
+.form-input{
+  width: 100%;
+  background: none;
+  font-size: 1rem;
+  padding: .6rem .3em;
+  border-bottom: 1px solid #5757577e;
+}
+.form-label{
+  color: rgba(0, 0, 0, 0.63);
+}
+.img-editar{
+  width: 100%
+}
+.img-editar img{
+  width: 100%;
+}
+.form-submit{
+  background: blue;
+  color: white;
+  font-weight: 300;
+  font-size: 1rem;
+  padding: .8em 0;
+  border-radius: .5em;
+  cursor: pointer;
 }
