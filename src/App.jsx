@@ -5,6 +5,8 @@ import CrearCliente from "./components/layouts/clientes/CrearCliente"
 import EditarCliente from "./components/layouts/clientes/EditarCliente"
 import ListarEmpleados from "./components/layouts/empleados/ListarEmpleados"
 import ListarPasswords from "./components/layouts/passwords/ListarPasswords"
+import CrearPassword from "./components/layouts/passwords/CrearPassword"
+import EditarPassword from "./components/layouts/passwords/EditarPassword"
 import ListarProductos from "./components/layouts/productos/ListarProductos"
 import CrearProductos from "./components/layouts/productos/CrearProductos"
 import ListarProveedores from "./components/layouts/proveedores/ListarProveedores"
@@ -46,6 +48,14 @@ const router = createBrowserRouter([
   {
     path:'/listarpasswords',
     element:<ListarPasswords/>
+  },
+  {
+    path:'/crearpassword',
+    element:<CrearPassword/>
+  },
+  {
+    path:'/editarpassword/:id',
+    element:<EditarPassword/>
   },
   {
     path:'/listarproductos',
