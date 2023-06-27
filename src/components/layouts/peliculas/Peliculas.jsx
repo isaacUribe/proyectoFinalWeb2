@@ -5,7 +5,7 @@ const urlPeliculas = 'https://api.themoviedb.org/3/movie/popular?api_key=d5c7753
 const Peliculas = () => {
   const [Peliculas, setPeliculas] = useState([])
   const getPeliculas = async () =>{
-    git
+    
   }
 
   return (
