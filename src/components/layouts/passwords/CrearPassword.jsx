@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { dataBase, subirImagen } from '../../config/dataBase'
 import { addDoc, collection } from 'firebase/firestore'
+import Menu from '../Menu'
 
 const CrearPassword = () => {
   const [nombre, setNombre] = useState("")
@@ -19,15 +20,28 @@ const CrearPassword = () => {
     returnListado("/listarpasswords")
   }
   return (
-    <div>
-      <form>
-        <input onChange={(e)=>setNombre(e.target.value)} placeholder={"Nombre"} type={"text"}/>
-        <input onChange={(e)=>setUsuario(e.target.value)} placeholder={"Usuario"} type={"text"}/>
-        <input onChange={(e)=>setPassword(e.target.value)} placeholder={"Password"} type={"text"}/>
+    <section>
+      <Menu/>
+    <div className='form'>
+      <form className='form-container'>
+        <h2 className='form-title'>Crear Nueva Password</h2>
+        <div className='form-grupo'>
+        <input onChange={(e)=>setNombre(e.target.value)} placeholder={"Nombre"} type={"text"} className='form-input'/>
+        </div>
+        <div className='form-grupo'>
+        <input onChange={(e)=>setUsuario(e.target.value)} placeholder={"Usuario"} type={"text"} className='form-input'/>
+        </div>
+        <div className='form-grupo'>
+        <input onChange={(e)=>setPassword(e.target.value)} placeholder={"Password"} type={"text"} className='form-input'/>
+        </div>
+        <section>
         <input onChange={(e)=>setImg(e.target.files[0])} type="file" />
-        <input onClick={agregarPassword} type="button" value={"Agregar password"}/>
+        <label className='form-label'>Imagen Sitio Web</label>
+        </section>
+        <input onClick={agregarPassword} type="button" value={"Agregar password"} className='form-submit'/>
       </form>
     </div>
+    </section>
   )
 }
 

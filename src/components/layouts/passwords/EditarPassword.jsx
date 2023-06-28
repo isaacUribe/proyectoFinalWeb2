@@ -50,8 +50,8 @@ const EditarPassword = () => {
         <label className='form-label'>Password</label>
         </div>
         <div className='img-editar'>
-          <label className='form-label'>Imagen Sitio Web</label>
         <img src={img} alt="" />
+        <label className='form-label'>Imagen Sitio Web</label>
         </div>
         <input onChange={(e)=>setImg(e.target.files[0])} type="file" />
         <input onClick={ediarPassword} type="button" value={"Editar password"} className='form-submit'/>

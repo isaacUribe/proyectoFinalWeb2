@@ -62,12 +62,19 @@
 .form-grupo{
   position: relative;
 }
+.form-title{
+  font-size: 2rem;
+  margin-bottom: .5rem;
+  color: rgb(41, 38, 38);
+}
 .form-input{
   width: 100%;
   background: none;
   font-size: 1rem;
   padding: .6rem .3em;
   border-bottom: 1px solid #5757577e;
+
+
 }
 .form-label{
   color: rgba(0, 0, 0, 0.63);
