@@ -70,7 +70,7 @@ const Home = () => {
           <section className='texto-home1'>
             <h2>Peliculas</h2>
             <p>
-            Tambien tenemos un para ofrecerles peliculas de la mejor calidad para ustede y su familia
+            Tambien tenemos para ofrecerles peliculas de la mejor calidad para ustedes y su familia
             </p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed quidem quisquam ratione atque deleniti cumque nam velit. Quibusdam doloremque officia repellat? Nulla eaque, inventore ut repellat veniam cum maxime consequuntur.</p>
           </section>
