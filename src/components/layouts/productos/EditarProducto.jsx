@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { dataBase, subirImagen } from '../../config/dataBase'
 import { useNavigate, useParams } from 'react-router-dom'
 import { doc, getDoc, updateDoc } from 'firebase/firestore'
+import Menu from '../Menu'
 
 const EditarProducto = () => {
   const [nombre, setNombre] = useState("")
@@ -35,16 +36,38 @@ const EditarProducto = () => {
     }, [])
   return (
     <section>
-        <form>
-            <input onChange={(e)=>setNombre(e.target.value)} placeholder={'Nombre producto'} type={"text"} value={nombre}/>
-            <input onChange={(e)=>setCantidad(e.target.value)} placeholder={'Cantidad producto'} type={"text"} value={cantidad}/>
-            <input onChange={(e)=>setValor(e.target.value)} placeholder={'Valor producto'} type={"text"} value={valor}/>
-            <input onChange={(e)=>setDescripcion(e.target.value)} placeholder={'Descripcion producto'} type={"text"} value={descripcion}/>
-            <input onChange={(e)=>setCategoria(e.target.value)} placeholder={'Categoria producto'} type={"text"} value={categoria}/>
-            <img src={img}  />
+      <Menu/>
+    <section className='form'>
+        <form className='form-container'>
+          <h2 className='form-title'>Editar Producto</h2>
+          <div className='form-grupo'>
+            <input onChange={(e)=>setNombre(e.target.value)}  type={"text"} value={nombre} className='form-input'/>
+            <label className='form-label'>Nombre</label>
+            </div>
+            <div className='form-grupo'>
+            <input onChange={(e)=>setCantidad(e.target.value)}  type={"text"} value={cantidad} className='form-input'/>
+            <label className='form-label'>Cantidad</label>
+            </div>
+            <div className='form-grupo'>
+            <input onChange={(e)=>setValor(e.target.value)}  type={"text"} value={valor} className='form-input'/>
+            <label className='form-label'>Valor</label>
+            </div>
+            <div className='form-grupo'>
+            <input onChange={(e)=>setDescripcion(e.target.value)}  type={"text"} value={descripcion} className='form-input'/>
+            <label className='form-label'>Descripcion</label>
+            </div>
+            <div className='form-grupo'>
+            <input onChange={(e)=>setCategoria(e.target.value)}  type={"text"} value={categoria} className='form-input'/>
+            <label className='form-label'>Categoria</label>
+            </div>
+            <div className='img-editar'>
+            <img src={img}/>
+            <label className='form-label'>Imagen producto</label>
+            </div>
             <input onChange={(e)=>setImg(e.target.files[0])} type='file'/>
-            <input onClick={editarproducto} type="button" value={"Editar producto"} />
+            <input onClick={editarproducto} type="button" value={"Editar producto"} className='form-submit'/>
         </form>
+    </section>
     </section>
   )
 }

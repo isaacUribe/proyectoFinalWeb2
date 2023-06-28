@@ -4,6 +4,7 @@ import { useNavigate, useParams } from 'react-router'
 import { dataBase, subirImagen } from '../../config/dataBase'
 import { doc, getDoc, updateDoc } from '@firebase/firestore'
 import { async } from '@firebase/util'
+import Menu from '../Menu'
 
 
 const EditarEmpleado = () => {
@@ -42,18 +43,46 @@ const EditarEmpleado = () => {
   }, [])
   return (
     <section>
-    <form >
-      <input onChange={(e)=>setNombre(e.target.value)} placeholder={"Nombre empleado"} type={"text"} value={nombre}/>
-      <input onChange={(e)=>setDocumento(e.target.value)} placeholder={"Documento empleado"} type={"text"} value={documento}/>
-      <input onChange={(e)=>setCorreo(e.target.value)} placeholder={"Correo empleado"} type={"text"} value={correo}/>
-      <input onChange={(e)=>setCargo(e.target.value)} placeholder={"Cargo empleado"} type={"text"} value={cargo}/>
-      <input onChange={(e)=>setSalario(e.target.value)} placeholder={"Salario empleado"} type={"text"} value={salario}/>
-      <input onChange={(e)=>setDireccion(e.target.value)} placeholder={"Direccion empleado"} type={"text"} value={direccion}/>
-      <input onChange={(e)=>setCuentaBanco(e.target.value)} placeholder={"Cuenta Bancaria empleado"} type={"text"} value={cuentaBanco}/>
+      <Menu/>
+    <section className='form'>
+    <form className='form-container'>
+    <h2 className='form-title'>Editar Empleado</h2>
+    <div className='form-grupo'>
+      <input onChange={(e)=>setNombre(e.target.value)}  type={"text"} value={nombre} className='form-input'/>
+      <label className='form-label'>Nombre</label>
+      </div>
+      <div className='form-grupo'>
+      <input onChange={(e)=>setDocumento(e.target.value)}  type={"text"} value={documento} className='form-input'/>
+      <label className='form-label'>Documento</label>
+      </div>
+      <div className='form-grupo'>
+      <input onChange={(e)=>setCorreo(e.target.value)}  type={"text"} value={correo} className='form-input'/>
+      <label className='form-label'>Correo</label>
+      </div>
+      <div className='form-grupo'>
+      <input onChange={(e)=>setCargo(e.target.value)}  type={"text"} value={cargo} className='form-input'/>
+      <label className='form-label'>Cargo</label>
+      </div>
+      <div className='form-grupo'>
+      <input onChange={(e)=>setSalario(e.target.value)}  type={"text"} value={salario} className='form-input'/>
+      <label className='form-label'>Salario</label>
+      </div>
+      <div className='form-grupo'>
+      <input onChange={(e)=>setDireccion(e.target.value)}  type={"text"} value={direccion} className='form-input'/>
+      <label className='form-label'>Direccion</label>
+      </div>
+      <div className='form-grupo'>
+      <input onChange={(e)=>setCuentaBanco(e.target.value)}  type={"text"} value={cuentaBanco} className='form-input'/>
+      <label className='form-label'>Cuenta Banco</label>
+      </div>
+      <div className='img-editar'>
       <img src={img} alt="" />
+      <label className='form-label'>Imagen Emplado</label>
+      </div>
       <input onChange={(e)=>setImg(e.target.files[0])}  type="file"/>
-      <input type="button" onClick={editarEmpleado} value={"Editar Cliente"}/>
+      <input type="button" onClick={editarEmpleado} value={"Editar Empleado"} className='form-submit'/>
     </form>
+  </section>
   </section>
   )
 }
