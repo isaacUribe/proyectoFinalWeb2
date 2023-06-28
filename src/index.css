@@ -7,8 +7,56 @@
     border: none;
     text-transform: capitalize; 
 }
+header{
+  width: 100%;
+  background-color:rgb(143, 143, 199);
+}
 
 
+.ul{
+  padding: 0;
+  list-style: none;
+}
+.ul li{
+  display: inline-block;
+}
+.ul li .link{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+  display: block;
+  padding: 15px;
+  color: white;
+}
+.ul li .link:hover{
+  background-color: rgb(13, 30, 190);
+}
+
+.titulo{
+  text-align: center;
+  margin-top: 20px;
+}
+
+.cuerpo-home1{
+  margin: 30px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+
+}
+.cuerpo-home1 .texto-home1{
+  padding: 30px;
+}
+.cuerpo-home1 .texto-home1 img{
+  width: 400px;
+  height: 400px;
+  padding: 20px;
+}
+.cuerpo-home1 img{
+  width: 500px;
+  float: left;
+  margin-right: 20px;  
+}
 .form{
   background-color: rgb(167, 167, 196);
   margin:auto;
