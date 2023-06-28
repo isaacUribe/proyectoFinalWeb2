@@ -28,9 +28,9 @@ const Peliculas = () => {
         peliculas.map((pelicula) => (
             <section className="card">
               <h2>Nombre: {pelicula.title}</h2>
-              <h2>Valoracion: {pelicula.vote_average}</h2>
-              <h2>Fecha de estreno: {pelicula.release_date}</h2>
-              <p>Fecha de estreno: {pelicula.overview}</p>
+              <h4>Valoracion: {pelicula.vote_average}</h4>
+              <h4>Fecha de estreno: {pelicula.release_date}</h4>
+              <h4>Descripcion: {pelicula.overview}</h4>
             </section>
         ))
       }
