@@ -9,41 +9,26 @@
 }
 
 
- header{
-    width: 100%;
-    background-color: rgb(39, 119, 238);
-  }
-  .ul{
-    padding: 0;
-    list-style: none;
-  }
-  .ul li{
-    display: inline-block;
-  }
-  .ul li .link{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    text-decoration: none;
-    display: block;
-    padding: 15px;
-    color: white;
-  }
-  .ul li .link:hover{
-    background-color: red;
-  }
-.imgemple{
-    width: 400px;
-    height: 200px;
-    border-radius: 15px;
-} */
 
-.section{
-    border: 1px solid black;
-    width: 500px;
-    text-align: center;
-    padding: 10px;
-    margin: 3px;
-} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .form{
   background-color: rgb(167, 167, 196);
   margin:auto;
@@ -93,4 +78,5 @@
   padding: .8em 0;
   border-radius: .5em;
   cursor: pointer;
+
 }
