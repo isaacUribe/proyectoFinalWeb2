@@ -76,6 +76,7 @@ const EditarCliente = () => {
             </div>
             <div className='img-editar'>
             <img src={img} />
+            <label className='form-label'>Imagen Cliente</label>
             </div>
             <input onChange={(e)=>setImg(e.target.files[0])} type="file" accept="image/*"/>
             <input onClick={editarCliente} type="button" value={"Editar Cliente"} className='form-submit'/>
