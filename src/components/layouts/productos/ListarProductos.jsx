@@ -23,24 +23,28 @@ const ListarProductos = () => {
   return (
     <section>
       <Menu/>
-      <h1>Esta es la lista de productos</h1>
-      <hr />
-      <h1>Para crear un nuevo producto pulse aqui</h1>
-      <Link to={'/crearproducto'}>Crear</Link>
+      <h1 className="titulo">Productos</h1>
+      <h3 className="titulo">Para crear un nuevo producto pulse aqui</h3>
+      <Link className="btn btn-outline-primary btn-crear" to={'/crearproducto'}>Crear producto</Link>
+      <div className="card-container">
       {
         productos.map((producto)=>(
           <section key={producto.id}>
-            <h1>Nombre: {producto.nombre}</h1>
-            <h2>Cantidad: {producto.cantidad}</h2>
-            <h2>Valor: {producto.valor}</h2>
-            <h2>Descripcion: {producto.descripcion}</h2>
-            <h2>Categoria: {producto.categoria}</h2>
-            <img src={producto.urlImg} alt="" />
-            <button onClick={(()=>{eliminarProducto(producto.id)})}>Eliminar</button>
-            <Link to={'/editarproducto/'+ producto.id}>Editar</Link>
+            <div className="card cardListar">
+            <img src={producto.urlImg} alt="" className="card-img-top"/>
+            <h3 className="card-title">Nombre: {producto.nombre}</h3>
+            <p><strong>Cantidad:</strong> {producto.cantidad}</p>
+            <p><strong>Valor:</strong> {producto.valor}</p>
+            <p><strong>Descripcion:</strong> {producto.descripcion}</p>
+            <p><strong>Categoria:</strong> {producto.categoria}</p>
+            
+            <button className="btn btn-outline-primary" onClick={(()=>{eliminarProducto(producto.id)})}>Eliminar</button>
+            <Link className="btn btn-outline-primary" to={'/editarproducto/'+ producto.id}>Editar</Link>
+            </div>
           </section>
         ))
       }
+      </div>
     </section>
   )
 }

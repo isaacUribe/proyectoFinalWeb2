@@ -23,26 +23,32 @@ const ListarProveedores = () => {
   return (
     <section>
       <Menu/>
-      <hr />
-      <h1>Si desea crea un nuevo proveedor pulse aqui</h1>
-      <Link to={'/crearproveedor'}>Crear</Link>
-      <h1>Aqui se mostraran los proveedores</h1>
+      <h1 className='titulo'>Proveedores</h1>
+      <h1 className='titulo'>Si desea crea un nuevo proveedor pulse aqui</h1>
+      <Link className="btn btn-outline-primary btn-crear" to={'/crearproveedor'}>Crear Proveedor</Link>
+      <div className="card-container">
       {
         proveedores.map((proveedor)=>(
           <section key={proveedor.id}>
-            <h1>Nombre: {proveedor.nombre}</h1>
-            <h2>Direccion: {proveedor.direccion}</h2>
-            <h2>Ciudad: {proveedor.ciudad}</h2>
-            <h2>Nit: {proveedor.nit}</h2>
-            <h2>Telefono: {proveedor.telefono}</h2>
-            <h3>Nombre Gerente: {proveedor.nombreGerente}</h3>
+            <div className="card cardListar">
             <img src={proveedor.urlImg} />
+            <div className="card-body">
+            <h3 className="card-title">Nombre: {proveedor.nombre}</h3>
+            <p><strong>Direccion:</strong> {proveedor.direccion}</p>
+            <p><strong>Ciudad:</strong> {proveedor.ciudad}</p>
+            <p><strong>Nit:</strong> {proveedor.nit}</p>
+            <p><strong>Telefono: </strong>{proveedor.telefono}</p>
+            <p><strong>Nombre Gerente:</strong> {proveedor.nombreGerente}</p>
             <img src={proveedor.urlLogo} alt="" />
-            <button onClick={(()=>{eliminarProveedor(proveedor.id)})}>Eliminar</button>
-            <Link to={'/editarproveedor/' + proveedor.id}>Editar</Link>
+            <p>Logo Empresa</p>
+            <button className="btn btn-outline-primary" onClick={(()=>{eliminarProveedor(proveedor.id)})}>Eliminar</button>
+            <Link className="btn btn-outline-primary" to={'/editarproveedor/' + proveedor.id}>Editar</Link>
+            </div>
+            </div>
           </section>
         ))
       }
+      </div>
     </section>
   )
 }

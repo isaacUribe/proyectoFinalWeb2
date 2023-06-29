@@ -26,25 +26,31 @@ const ListarEmpleados = () => {
   return (
       <div>
         <Menu/>
-        <hr />
-        <h1>Para crear un nuevo empleado pulse aqui</h1>
-        <Link to={'/crearempleado'}>Crear Empleado</Link>
+        <h1 className='titulo'>Empleados</h1>
+        <h3 className='titulo'>Para crear un nuevo empleado pulse aqui</h3>
+        <Link to={'/crearempleado'} className="btn btn-outline-primary btn-crear">Crear Empleado </Link>
+        <div className='card-container'>
         {
           empleados.map((empleado)=>(
-            <section key={empleado.id}>
-              <h1>Nombre: {empleado.nombre}</h1>
-              <h2>Documento: {empleado.documento}</h2>
-              <h2>Correo: {empleado.correo}</h2>
-              <h2>Cargo: {empleado.cargo}</h2>
-              <h2>Salario: {empleado.salario}</h2>
-              <h2>Direccion: {empleado.direccion}</h2>
-              <h2>Numero Cuenta Bancaria: {empleado.cuentaBanco}</h2>
-              <img src={empleado.urlImg} alt="" />
-              <button onClick={(e)=>{eliminarEmpleado(empleado.id)}}>Eliminar</button>
-              <Link to={'/editarempleado/' + empleado.id}>Editar</Link>
+            <section key={empleado.id} >
+              <div className="card cardListar" >
+              <img src={empleado.urlImg} alt="" className="card-img-top" />
+              <div className="card-body"></div>
+              <h3 className="card-title">Nombre: {empleado.nombre}</h3>
+              <p><strong>Documento:</strong> {empleado.documento}</p>
+              <p><strong>Correo:</strong>  {empleado.correo}</p>
+              <p><strong>Cargo:</strong>  {empleado.cargo}</p>
+              <p><strong>Salario:</strong>  {empleado.salario}</p>
+              <p><strong>Direccion:</strong>  {empleado.direccion}</p>
+              <p><strong>Numero Cuenta Bancaria: </strong> {empleado.cuentaBanco}</p>
+              
+              <button className="btn btn-outline-primary" onClick={(e)=>{eliminarEmpleado(empleado.id)}}>Eliminar</button>
+              <Link className="btn btn-outline-primary" to={'/editarempleado/' + empleado.id}>Editar</Link>
+              </div>
             </section>
           ))
         }
+        </div>
       </div>
   )
 }
