@@ -26,7 +26,7 @@ const Peliculas = () => {
       <section className="container">
         {
         peliculas.map((pelicula) => (
-            <section className="card">
+            <section className="card-peliculas">
               <h2>Nombre: {pelicula.title}</h2>
               <h4>Valoracion: {pelicula.vote_average}</h4>
               <h4>Fecha de estreno: {pelicula.release_date}</h4>
