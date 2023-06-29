@@ -36,13 +36,13 @@ const ListarEmpleados = () => {
               <div className="card cardListar" >
               <img src={empleado.urlImg} alt="" className="card-img-top" />
               <div className="card-body"></div>
-              <h1 className="card-title">Nombre: {empleado.nombre}</h1>
-              <h2>Documento: {empleado.documento}</h2>
-              <h2>Correo: {empleado.correo}</h2>
-              <h2>Cargo: {empleado.cargo}</h2>
-              <h2>Salario: {empleado.salario}</h2>
-              <h2>Direccion: {empleado.direccion}</h2>
-              <h2>Numero Cuenta Bancaria: {empleado.cuentaBanco}</h2>
+              <h3 className="card-title">Nombre: {empleado.nombre}</h3>
+              <p><strong>Documento:</strong> {empleado.documento}</p>
+              <p><strong>Correo:</strong>  {empleado.correo}</p>
+              <p><strong>Cargo:</strong>  {empleado.cargo}</p>
+              <p><strong>Salario:</strong>  {empleado.salario}</p>
+              <p><strong>Direccion:</strong>  {empleado.direccion}</p>
+              <p><strong>Numero Cuenta Bancaria: </strong> {empleado.cuentaBanco}</p>
               
               <button className="btn btn-outline-primary" onClick={(e)=>{eliminarEmpleado(empleado.id)}}>Eliminar</button>
               <Link className="btn btn-outline-primary" to={'/editarempleado/' + empleado.id}>Editar</Link>

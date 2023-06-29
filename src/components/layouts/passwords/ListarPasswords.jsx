@@ -31,10 +31,10 @@ const ListarPasswords = () => {
           <section key={pass.id}>
             <div className="card cardListar">
             <img src={pass.urlImg} alt="" className="card-img-top"/>
-            <h1 className="card-title">Nombre: {pass.nombre}</h1>
-            <h2>Usuario: {pass.usuario}</h2>
-            <h2>Passoword: {pass.password}</h2>
-            <h2>Url Imagen: {pass.urlImg}</h2>
+            <h3 className="card-title">Nombre: {pass.nombre}</h3>
+            <p><strong>Usuario:</strong>{pass.usuario}</p>
+            <p><strong>Passoword:</strong> {pass.password}</p>
+            {/* <p><strong>Url Imagen:</strong> {pass.urlImg}</p> */}
             
             <button className="btn btn-outline-primary" onClick={()=>{eliminarPassword(pass.id)}}>Elimiar</button>
             <Link className="btn btn-outline-primary" to={'/editarpassword/' +  pass.id}>Editar</Link>

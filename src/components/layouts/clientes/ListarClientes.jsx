@@ -35,15 +35,15 @@ const ListarClientes = () => {
             <div className="card cardListar" >
             <img src={cliente.urlImg} alt="imagen" className="card-img-top"/>
               <div className="card-body">
-                <h1 className="card-title">Nombre: {cliente.nombre}</h1>
-                <h2>Documento: {cliente.documento}</h2>
-                <h2>Correo: {cliente.correo}</h2>
-                <h2>Telefono: {cliente.telefono}</h2>
-                <h4>Direccion: {cliente.direccion}</h4>
-                <h4>Barrio: {cliente.barrio}</h4>
-                <h4>Ciudad: {cliente.ciudad}</h4>
-                <button className="btn btn-outline-primary" onClick={(()=>{eliminarCliente(cliente.id)})}>Eliminar</button>
-                <Link to={'/editarCliente/'+cliente.id} className="btn btn-outline-primary">Editar</Link>
+                <h3 className="card-title">Nombre: {cliente.nombre}</h3>
+                <p><strong>Documento:</strong> {cliente.documento}</p>
+                <p><strong>Correo:</strong> {cliente.correo}</p>
+                <p><strong>Telefono:</strong> {cliente.telefono}</p>
+                <p><strong>Direccion:</strong> {cliente.direccion}</p>
+                <p><strong>Barrio:</strong> {cliente.barrio}</p>
+                <p><strong>Ciudad:</strong> {cliente.ciudad}</p>
+                <button className="btn btn-outline-primary btn-eliminar" onClick={(()=>{eliminarCliente(cliente.id)})}>Eliminar</button>
+                <Link to={'/editarCliente/'+cliente.id} className="btn btn-outline-primary btn-editar">Editar</Link>
                 </div>
               </div>
           </section>

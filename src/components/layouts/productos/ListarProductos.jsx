@@ -32,11 +32,11 @@ const ListarProductos = () => {
           <section key={producto.id}>
             <div className="card cardListar">
             <img src={producto.urlImg} alt="" className="card-img-top"/>
-            <h1 className="card-title">Nombre: {producto.nombre}</h1>
-            <h2>Cantidad: {producto.cantidad}</h2>
-            <h2>Valor: {producto.valor}</h2>
-            <h2>Descripcion: {producto.descripcion}</h2>
-            <h2>Categoria: {producto.categoria}</h2>
+            <h3 className="card-title">Nombre: {producto.nombre}</h3>
+            <p><strong>Cantidad:</strong> {producto.cantidad}</p>
+            <p><strong>Valor:</strong> {producto.valor}</p>
+            <p><strong>Descripcion:</strong> {producto.descripcion}</p>
+            <p><strong>Categoria:</strong> {producto.categoria}</p>
             
             <button className="btn btn-outline-primary" onClick={(()=>{eliminarProducto(producto.id)})}>Eliminar</button>
             <Link className="btn btn-outline-primary" to={'/editarproducto/'+ producto.id}>Editar</Link>

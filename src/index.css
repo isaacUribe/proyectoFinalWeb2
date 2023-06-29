@@ -155,3 +155,20 @@ header{
 .card-container .cardListar img{
   height: 300px;
 }
+.card-container .cardListar .btn{
+  color:rgb(214, 138, 50);
+  border: 1px solid rgb(214, 138, 50);
+}
+.card-container .cardListar .btn:hover{
+  background-color: rgb(214, 138, 50);
+  color: white;
+}
+.btn-crear{
+  color:rgb(214, 138, 50);
+  border: 1px solid rgb(214, 138, 50);
+}
+.btn-crear:hover{
+  background-color: rgb(214, 138, 50);
+  color: white;
+  border: 1px solid rgb(214, 138, 50);
+}
